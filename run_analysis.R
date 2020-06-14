@@ -34,11 +34,9 @@ mean_std_measurements = select(merge_train_test, contains("mean") | contains("st
 map = setNames(as.vector(activity_labels[, "V2"]), as.vector(activity_labels[, "V1"]))
 mean_std_measurements[, "activity_labels"] = map[mean_std_measurements[, "activity_labels"]]
 
-columnwise_mean = mean_std_measurements %>% 
+groupwise_column_mean = mean_std_measurements %>% 
     group_by(activity_labels, subject) %>% summarise_all(funs(mean(.)))
 
-columnwise_mean = as.data.frame(columnwise_mean)
-
-write.table(columnwise_mean, "tidy_columnwise_mean.txt")
-write.table(mean_std_measurements, "tidy_mean_std_measurements.txt")
+write.table(groupwise_column_mean, "groupwise_column_mean.txt", row.names=FALSE)
+write.table(mean_std_measurements, "merged_mean_std_measurements.txt", row.names=FALSE)
 
