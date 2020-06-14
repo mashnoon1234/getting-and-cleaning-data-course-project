@@ -1,5 +1,5 @@
 # Dataset Overview and Source
-Two datasets have been created from the train and test data provided in the [Human Activity Recognition using Smartphones Dataset](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones) using a custom data-preprocessing script. Relevant information including experiment design, data collection method and units of the source dataset can be found in the <em>README.txt</em> file in the <em>Source Information</em> directory, which has been collected from the original data source.
+Two datasets have been created from the train and test data provided in the [Human Activity Recognition using Smartphones Dataset](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones) using a custom data-preprocessing script. Relevant information including experiment design, data collection method and units of the source dataset can be found in the <em>README.txt</em> file in the <em>Source Information</em> directory, which has been collected from the original data source. The contents of the files in the data source and the files generated after running the script are all delimited by one white space character.
 
 # Dataset Information
 
