@@ -1,4 +1,7 @@
-library(dplyr)
+if (!require("dplyr", character.only = TRUE)) {
+    install.packages("dplyr", dependencies = TRUE)
+    library("dplyr", character.only = TRUE)
+}
 
 X_train = read.table("UCI\ HAR\ Dataset/train/X_train.txt")
 y_train = read.table("UCI\ HAR\ Dataset/train/y_train.txt")
@@ -29,4 +32,12 @@ map = setNames(as.vector(activity_labels[, "V2"]), as.vector(activity_labels[, "
 mean_std_measurements[, "activity_labels"] = map[mean_std_measurements[, "activity_labels"]]
 print(head(mean_std_measurements))
 
+columnwise_mean = mean_std_measurements %>% group_by(activity_labels) %>%
+    summarise_all(funs(mean(.)))
+
+columnwise_mean = as.data.frame(columnwise_mean)
+print(columnwise_mean)
+
+write.table(columnwise_mean, "tidy_columnwise_mean.txt")
+write.table(mean_std_measurements, "tidy_mean_std_measurements.txt")
 
