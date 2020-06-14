@@ -1,6 +1,6 @@
 # Overview 
 
-This repository contains an R script <em>run_analysis.R</em> that transforms the train and test data of the [Human Activity Recognition Using Smartphones Dataset](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones) into two tidy datasets, which have been described in [CodeBook.md](../blob/master/CodeBook).
+This repository contains an R script <em>run_analysis.R</em> that transforms the train and test data of the [Human Activity Recognition Using Smartphones Dataset](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones) into two tidy datasets, which have been described in [CodeBook.md](../master/CodeBook.md).
 
 # Usage Instructions
 
